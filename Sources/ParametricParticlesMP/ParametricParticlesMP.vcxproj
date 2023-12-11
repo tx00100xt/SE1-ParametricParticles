@@ -1,0 +1,973 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Template|Win32">
+      <Configuration>Template</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Template|x64">
+      <Configuration>Template</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <Keyword>MFCProj</Keyword>
+    <ProjectGuid>{D9F67AA1-970A-BFDD-6BE9-BD0CDCE98A10}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.14393.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Template|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Template|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Template|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Template|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>Release\</OutDir>
+    <IntDir>Release\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+    <ExecutablePath>$(SolutionDir)..\x32\SamTSE\Bin;$(ExecutablePath)</ExecutablePath>
+    <IncludePath>$(SolutionDir)ParametricParticlesMP;$(SolutionDir);$(SolutionDir)EntitiesMP;$(SolutionDir)..\Tools.Win32\Libraries\DX8SDK\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)..\Lib\x32;$(SolutionDir)..\Tools.Win32\Libraries\DX8SDK\Lib;$(LibraryPath)</LibraryPath>
+    <TargetName>$(ProjectName)</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <ExecutablePath>$(SolutionDir)..\x64\SamTSE\Bin;$(ExecutablePath)</ExecutablePath>
+    <IncludePath>$(SolutionDir)ParametricParticlesMP;$(SolutionDir);$(SolutionDir)EntitiesMP;$(SolutionDir)..\Tools.Win32\Libraries\DX8SDK\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)..\Lib\x64;$(SolutionDir)..\Tools.Win32\Libraries\DX8SDK\Lib;$(LibraryPath)</LibraryPath>
+    <TargetName>$(ProjectName)</TargetName>
+    <OutDir>Release\</OutDir>
+    <IntDir>Release\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>Debug\</OutDir>
+    <IntDir>Debug\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+    <ExecutablePath>$(SolutionDir)..\Bin\Debug;$(ExecutablePath)</ExecutablePath>
+    <IncludePath>$(SolutionDir);$(SolutionDir)Engine\;$(SolutionDir)..\Tools.Win32\Libraries\DX8SDK\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)..\Bin\Debug;$(SolutionDir)..\Tools.Win32\Libraries\DX8SDK\Lib;$(LibraryPath)</LibraryPath>
+    <TargetName>$(ProjectName)D</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <ExecutablePath>$(SolutionDir)..\Bin\Debug;$(ExecutablePath)</ExecutablePath>
+    <IncludePath>$(SolutionDir);$(SolutionDir)Engine\;$(SolutionDir)..\Tools.Win32\Libraries\DX8SDK\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)..\Bin\Debug;$(SolutionDir)..\Tools.Win32\Libraries\DX8SDK\Lib;$(LibraryPath)</LibraryPath>
+    <TargetName>$(ProjectName)D</TargetName>
+    <OutDir>Debug\</OutDir>
+    <IntDir>Debug\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <Optimization>MaxSpeed</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <OmitFramePointers>false</OmitFramePointers>
+      <StringPooling>true</StringPooling>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_WINDLL;_USRDLL;_USE_32BIT_TIME_T;DIRECT3D_VERSION=0x0800;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\Release\</AssemblerListingLocation>
+      <PrecompiledHeaderOutputFile>.\Release\ParametricParticlesMP.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>ParametricParticlesMP/StdH/StdH.h</PrecompiledHeaderFile>
+      <ObjectFileName>.\Release\</ObjectFileName>
+      <ProgramDataBaseFileName>.\Release\</ProgramDataBaseFileName>
+      <DisableSpecificWarnings>4996;4333</DisableSpecificWarnings>
+      <AdditionalIncludeDirectories>ParametricParticlesMP\StdH</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Midl>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TypeLibraryName>.\Release\EntitiesMP.tlb</TypeLibraryName>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Release\EntitiesMP.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <LinkDLL>true</LinkDLL>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>Release\ParametricParticlesMP.dll</OutputFile>
+      <ImportLibrary>.\Release\ParametricParticlesMP.lib</ImportLibrary>
+    </Link>
+    <CustomBuildStep>
+      <Command>copy .\Release\$(TargetName).dll $(SolutionDir)..\x32\SamTSE\Bin\ &gt;nul
+copy .\Release\$(TargetName).map $(SolutionDir)..\x32\SamTSE\Bin\ &gt;nul
+copy .\Release\$(TargetName).lib $(SolutionDir)..\x32\SamTSE\Bin\ &gt;nul</Command>
+      <Message>Copying %(Filename) binaries to \Bin</Message>
+      <Outputs>$(SolutionDir)..\x32\SamTSE\Bin\$(InputName).dll;%(Outputs)</Outputs>
+    </CustomBuildStep>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <Optimization>MaxSpeed</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <OmitFramePointers>false</OmitFramePointers>
+      <StringPooling>true</StringPooling>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_WINDLL;_USRDLL;DIRECT3D_VERSION=0x0800;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\Release\</AssemblerListingLocation>
+      <PrecompiledHeaderOutputFile>.\Release\ParametricParticlesMP.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>ParametricParticlesMP/StdH/StdH.h</PrecompiledHeaderFile>
+      <ObjectFileName>.\Release\</ObjectFileName>
+      <ProgramDataBaseFileName>.\Release\</ProgramDataBaseFileName>
+      <DisableSpecificWarnings>4996;4333</DisableSpecificWarnings>
+      <AdditionalIncludeDirectories>ParametricParticlesMP\StdH</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Midl>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TypeLibraryName>.\Release\EntitiesMP.tlb</TypeLibraryName>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Release\EntitiesMP.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <LinkDLL>true</LinkDLL>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>Release\ParametricParticlesMP.dll</OutputFile>
+      <ImportLibrary>.\Release\ParametricParticlesMP.lib</ImportLibrary>
+    </Link>
+    <CustomBuildStep>
+      <Command>copy .\Release\$(TargetName).dll $(SolutionDir)..\x64\SamTSE\Bin\ &gt;nul
+copy .\Release\$(TargetName).map $(SolutionDir)..\x64\SamTSE\Bin\ &gt;nul
+copy .\Release\$(TargetName).lib $(SolutionDir)..\x64\SamTSE\Bin\ &gt;nul</Command>
+      <Message>Copying %(Filename) binaries to \Bin</Message>
+      <Outputs>$(SolutionDir)..\x64\SamTSE\Bin\$(InputName).dll;%(Outputs)</Outputs>
+    </CustomBuildStep>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <Optimization>Disabled</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <MinimalRebuild>true</MinimalRebuild>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_WINDLL;_USE_32BIT_TIME_T;DIRECT3D_VERSION=0x0800;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>Debug\</AssemblerListingLocation>
+      <PrecompiledHeaderOutputFile>.\Debug\EntitiesMP.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>EntitiesMP/StdH/StdH.h</PrecompiledHeaderFile>
+      <ObjectFileName>Debug\</ObjectFileName>
+      <ProgramDataBaseFileName>Debug\</ProgramDataBaseFileName>
+      <DisableSpecificWarnings>4996;4333</DisableSpecificWarnings>
+      <AdditionalIncludeDirectories>
+      </AdditionalIncludeDirectories>
+    </ClCompile>
+    <Midl>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TypeLibraryName>.\Debug\EntitiesMP.tlb</TypeLibraryName>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Debug\EntitiesMP.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <LinkDLL>true</LinkDLL>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>Debug/EntitiesMPD.dll</OutputFile>
+      <ImportLibrary>.\Debug\EntitiesMPD.lib</ImportLibrary>
+      <AdditionalDependencies>EngineD.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <CustomBuildStep>
+      <Command>copy Debug\$(TargetName).dll $(SolutionDir)..\Bin\Debug\ &gt;nul
+copy Debug\$(TargetName).map $(SolutionDir)..\Bin\Debug\ &gt;nul
+copy Debug\$(TargetName).lib $(SolutionDir)..\Bin\Debug\ &gt;nul</Command>
+      <Message>Copying %(Filename) binaries to \Bin\Debug</Message>
+      <Outputs>$(SolutionDir)..\Bin\Debug\$(InputName).dll;%(Outputs)</Outputs>
+    </CustomBuildStep>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <Optimization>Disabled</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_WINDLL;DIRECT3D_VERSION=0x0800;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>Debug\</AssemblerListingLocation>
+      <PrecompiledHeaderOutputFile>.\Debug\EntitiesMP.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>EntitiesMP/StdH/StdH.h</PrecompiledHeaderFile>
+      <ObjectFileName>Debug\</ObjectFileName>
+      <ProgramDataBaseFileName>Debug\</ProgramDataBaseFileName>
+      <DisableSpecificWarnings>4996;4333</DisableSpecificWarnings>
+      <AdditionalIncludeDirectories>
+      </AdditionalIncludeDirectories>
+    </ClCompile>
+    <Midl>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TypeLibraryName>.\Debug\EntitiesMP.tlb</TypeLibraryName>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Debug\EntitiesMP.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <LinkDLL>true</LinkDLL>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>Debug/EntitiesMPD.dll</OutputFile>
+      <ImportLibrary>.\Debug\EntitiesMPD.lib</ImportLibrary>
+      <AdditionalDependencies>EngineD.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <CustomBuildStep>
+      <Command>copy Debug\$(TargetName).dll $(SolutionDir)..\Bin\Debug\ &gt;nul
+copy Debug\$(TargetName).map $(SolutionDir)..\Bin\Debug\ &gt;nul
+copy Debug\$(TargetName).lib $(SolutionDir)..\Bin\Debug\ &gt;nul</Command>
+      <Message>Copying %(Filename) binaries to \Bin\Debug</Message>
+      <Outputs>$(SolutionDir)..\Bin\Debug\$(InputName).dll;%(Outputs)</Outputs>
+    </CustomBuildStep>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="LastFileID.txt" />
+    <CustomBuild Include="..\..\Flesh\Classes\Acid.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Flesh\Classes\AirWave.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Flesh\Classes\AmmoItem.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Flesh\Classes\AmmoPack.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Flesh\Classes\AnimationChanger.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Flesh\Classes\AnimationHub.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Flesh\Classes\ArmorItem.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Flesh\Classes\BackgroundViewer.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Flesh\Classes\BasicEffect.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Flesh\Classes\Beast.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Flesh\Classes\BigHead.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Flesh\Classes\BlendController.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Flesh\Classes\BloodSpray.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Flesh\Classes\Boneman.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Flesh\Classes\Bouncer.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Flesh\Classes\Bullet.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Flesh\Classes\Camera.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\FLESH\Classes\CameraMarker.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Flesh\Classes\CannonBall.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\flesh\Classes\CannonStatic.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Flesh\Classes\Catman.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\flesh\Classes\ChainSawFreak.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Flesh\Classes\Copier.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Flesh\Classes\Counter.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Flesh\Classes\CrateRider.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Flesh\Classes\Cyborg.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Flesh\Classes\CyborgBike.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Flesh\Classes\Damager.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Flesh\Classes\Debris.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\flesh\Classes\Demon.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Flesh\Classes\DestroyableArchitecture.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Flesh\Classes\Devil.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Flesh\Classes\DevilMarker.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Flesh\Classes\DevilProjectile.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Flesh\Classes\DoorController.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Flesh\Classes\Dragonman.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Flesh\Classes\EffectMarker.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Flesh\Classes\Effector.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Flesh\Classes\Elemental.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Flesh\Classes\EnemyBase.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Flesh\Classes\EnemyCounter.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Flesh\Classes\EnemyDive.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Flesh\Classes\EnemyFly.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Flesh\Classes\EnemyMarker.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Flesh\Classes\EnemyRunInto.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Flesh\Classes\EnemySpawner.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\flesh\Classes\EntityStateDisplay.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Flesh\Classes\EnvironmentBase.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Flesh\Classes\EnvironmentMarker.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Flesh\Classes\Eruptor.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Flesh\Classes\Eyeman.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Flesh\Classes\Fish.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Flesh\Classes\Fishman.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Flesh\Classes\Flame.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Flesh\Classes\FogMarker.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Flesh\Classes\GhostBusterRay.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Flesh\Classes\Gizmo.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Flesh\Classes\GradientMarker.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Flesh\Classes\GravityMarker.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Flesh\Classes\GravityRouter.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\flesh\Classes\Grunt.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\flesh\Classes\Guffy.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Flesh\Classes\HazeMarker.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Flesh\Classes\Headman.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Flesh\Classes\HealthItem.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Flesh\Classes\Huanman.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Flesh\Classes\Item.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Flesh\Classes\KeyItem.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Flesh\Classes\Light.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Flesh\Classes\Lightning.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Flesh\Classes\Mamut.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Flesh\Classes\Mamutman.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Flesh\Classes\Mantaman.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Flesh\Classes\Marker.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Flesh\Classes\MessageHolder.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Flesh\Classes\MessageItem.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Flesh\Classes\MirrorMarker.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Flesh\Classes\ModelDestruction.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Flesh\Classes\ModelHolder.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Flesh\Classes\ModelHolder2.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Flesh\Classes\MovingBrush.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Flesh\Classes\MovingBrushMarker.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Flesh\Classes\MusicChanger.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Flesh\Classes\MusicHolder.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Flesh\Classes\NavigationMarker.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Flesh\Classes\ParticlesHolder.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Flesh\Classes\Pendulum.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Flesh\Classes\Pipebomb.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Flesh\Classes\Player.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Flesh\Classes\PlayerActionMarker.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Flesh\Classes\PlayerAnimator.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Flesh\Classes\PlayerMarker.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Flesh\Classes\PlayerView.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Flesh\Classes\PlayerWeapons.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Flesh\Classes\PlayerWeaponsEffects.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\FLESH\Classes\PowerUpItem.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Flesh\Classes\Projectile.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Flesh\Classes\PyramidSpaceShip.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Flesh\Classes\PyramidSpaceShipMarker.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Flesh\Classes\Reminder.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Flesh\Classes\RobotDriving.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Flesh\Classes\RobotFixed.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Flesh\Classes\RobotFlying.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Flesh\Classes\RollingStone.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Flesh\Classes\Santa.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Flesh\Classes\Scorpman.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Flesh\Classes\Ship.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Flesh\Classes\ShipMarker.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\flesh\Classes\Shooter.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Flesh\Classes\SoundHolder.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Flesh\Classes\Switch.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Flesh\Classes\Teleport.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Flesh\Classes\TouchField.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Flesh\Classes\Trigger.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Flesh\Classes\Twister.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Flesh\Classes\VoiceHolder.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Flesh\Classes\Walker.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Flesh\Classes\Watcher.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Flesh\Classes\WatchPlayers.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Flesh\Classes\Water.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Flesh\Classes\WeaponItem.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Flesh\Classes\Werebull.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Flesh\Classes\Woman.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Flesh\Classes\WorldBase.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Flesh\Classes\WorldLink.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Flesh\Classes\WorldSettingsController.ecl">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Flesh\Data\Messages\Enemies\BeastBig.txt" />
+    <CustomBuild Include="..\..\Flesh\Data\Messages\Enemies\BeastNormal.txt" />
+    <CustomBuild Include="..\..\Flesh\Data\Messages\Enemies\Bomberman.txt" />
+    <CustomBuild Include="..\..\Flesh\Data\Messages\Enemies\Boneman.txt" />
+    <CustomBuild Include="..\..\Flesh\Data\Messages\Enemies\Bull.txt" />
+    <CustomBuild Include="..\..\flesh\DataMP\Messages\Enemies\ChainsawFreak.txt" />
+    <CustomBuild Include="..\..\Flesh\Data\Messages\Enemies\Devil.txt" />
+    <CustomBuild Include="..\..\Flesh\Data\Messages\Enemies\ElementalLava.txt" />
+    <CustomBuild Include="..\..\Flesh\Data\Messages\Enemies\EyemanGreen.txt" />
+    <CustomBuild Include="..\..\Flesh\Data\Messages\Enemies\EyemanPurple.txt" />
+    <CustomBuild Include="..\..\Flesh\Data\Messages\Enemies\Firecracker.txt" />
+    <CustomBuild Include="..\..\Flesh\Data\Messages\Enemies\Fish.txt" />
+    <CustomBuild Include="..\..\Flesh\Data\Messages\Enemies\Gizmo.txt" />
+    <CustomBuild Include="..\..\flesh\DataMP\Messages\Enemies\GruntCommander.txt" />
+    <CustomBuild Include="..\..\flesh\DataMP\Messages\Enemies\GruntSoldier.txt" />
+    <CustomBuild Include="..\..\flesh\DataMP\Messages\Enemies\Guffy.txt" />
+    <CustomBuild Include="..\..\Flesh\Data\Messages\Enemies\Kamikaze.txt" />
+    <CustomBuild Include="..\..\Flesh\Data\Messages\Enemies\Rocketman.txt" />
+    <CustomBuild Include="..\..\Flesh\Data\Messages\Enemies\ScorpmanGeneral.txt" />
+    <CustomBuild Include="..\..\Flesh\Data\Messages\Enemies\ScorpmanSoldier.txt" />
+    <CustomBuild Include="..\..\Flesh\Data\Messages\Enemies\WalkerBig.txt" />
+    <CustomBuild Include="..\..\Flesh\Data\Messages\Enemies\WalkerSmall.txt" />
+    <CustomBuild Include="..\..\Flesh\Data\Messages\Enemies\Woman.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\Engine\Classes\PlayerEntity.es">
+      <FileType>Document</FileType>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(Filename).cpp;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(Filename).cpp;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(Filename).cpp;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(Filename).cpp;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Engine/Classes/%(Filename).es </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Engine/Classes/%(Filename).es </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Engine/Classes/%(Filename).es </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Engine/Classes/%(Filename).es </Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">cd $(SolutionDir)
+ecc Engine/Classes/%(Filename).es </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">cd $(SolutionDir)
+ecc Engine/Classes/%(Filename).es </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">cd $(SolutionDir)
+ecc Engine/Classes/%(Filename).es </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">cd $(SolutionDir)
+ecc Engine/Classes/%(Filename).es </Command>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AutoHeightMap.cpp" />
+    <ClCompile Include="ParametricParticles.cpp" />
+    <ClCompile Include="ParticleRotation.cpp" />
+    <ClCompile Include="Particles.cpp" />
+    <ClCompile Include="ParticleVelocity.cpp" />
+    <ClCompile Include="SpawnShapeBase.cpp" />
+    <ClCompile Include="SpawnShapeBox.cpp" />
+    <ClCompile Include="SpawnShapeCylinder.cpp" />
+    <ClCompile Include="SpawnShapeSphere.cpp" />
+    <ClCompile Include="StdH\StdH.cpp" />
+    <ClCompile Include="WeakPointer.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Engine\Classes\BaseEvents.h" />
+    <ClInclude Include="..\Engine\Classes\BaseEvents_tables.h" />
+    <ClInclude Include="..\Engine\Classes\MovableBrushEntity.h" />
+    <ClInclude Include="..\Engine\Classes\MovableBrushEntity_tables.h" />
+    <ClInclude Include="..\Engine\Classes\MovableEntity.h" />
+    <ClInclude Include="..\Engine\Classes\MovableEntity_tables.h" />
+    <ClInclude Include="..\Engine\Classes\MovableModelEntity.h" />
+    <ClInclude Include="..\Engine\Classes\MovableModelEntity_tables.h" />
+    <ClInclude Include="..\Engine\Classes\PlayerEntity.h" />
+    <ClInclude Include="..\Engine\Classes\PlayerEntity_tables.h" />
+    <ClInclude Include="..\EntitiesMP\Common\Common.h" />
+    <ClInclude Include="..\EntitiesMP\Common\EmanatingParticles.h" />
+    <ClInclude Include="..\EntitiesMP\Common\Flags.h" />
+    <ClInclude Include="..\EntitiesMP\Common\GameInterface.h" />
+    <ClInclude Include="..\EntitiesMP\Common\Particles.h" />
+    <ClInclude Include="..\EntitiesMP\Global.h" />
+    <ClInclude Include="..\EntitiesMP\Global_tables.h" />
+    <ClInclude Include="..\EntitiesMP\StdH\StdH.h" />
+    <ClInclude Include="..\GameMP\PlayerSettings.h" />
+    <ClInclude Include="..\GameMP\SessionProperties.h" />
+    <ClInclude Include="AutoHeightMap.h" />
+    <ClInclude Include="AutoHeightMap_tables.h" />
+    <ClInclude Include="ParametricParticles.h" />
+    <ClInclude Include="ParametricParticles_tables.h" />
+    <ClInclude Include="ParticleRotation.h" />
+    <ClInclude Include="ParticleRotation_tables.h" />
+    <ClInclude Include="Particles.h" />
+    <ClInclude Include="ParticleVelocity.h" />
+    <ClInclude Include="ParticleVelocity_tables.h" />
+    <ClInclude Include="SpawnShapeBase.h" />
+    <ClInclude Include="SpawnShapeBase_tables.h" />
+    <ClInclude Include="SpawnShapeBox.h" />
+    <ClInclude Include="SpawnShapeBox_tables.h" />
+    <ClInclude Include="SpawnShapeCylinder.h" />
+    <ClInclude Include="SpawnShapeCylinder_tables.h" />
+    <ClInclude Include="SpawnShapeSphere.h" />
+    <ClInclude Include="SpawnShapeSphere_tables.h" />
+    <ClInclude Include="StdH\StdH.h" />
+    <ClInclude Include="WeakPointer.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\Engine\Classes\BaseEvents.es">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">cd $(SolutionDir)
+ecc Engine/Classes/%(Filename).es </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">cd $(SolutionDir)
+ecc Engine/Classes/%(Filename).es </Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(Filename).cpp;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(Filename).cpp;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Engine/Classes/%(Filename).es </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Engine/Classes/%(Filename).es </Message>
+    </CustomBuild>
+    <CustomBuild Include="..\Engine\Classes\MovableBrushEntity.es">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">cd $(SolutionDir)
+ecc Engine/Classes/%(Filename).es </Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(Filename).cpp;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(Filename).cpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">cd $(SolutionDir)
+ecc Engine/Classes/%(Filename).es </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Engine/Classes/%(Filename).es </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Engine/Classes/%(Filename).es </Message>
+    </CustomBuild>
+    <CustomBuild Include="..\Engine\Classes\MovableEntity.es">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">cd $(SolutionDir)
+ecc Engine/Classes/%(Filename).es </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">cd $(SolutionDir)
+ecc Engine/Classes/%(Filename).es </Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(Filename).cpp;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(Filename).cpp;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Engine/Classes/%(Filename).es </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Engine/Classes/%(Filename).es </Message>
+    </CustomBuild>
+    <CustomBuild Include="..\Engine\Classes\MovableModelEntity.es">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">cd $(SolutionDir)
+ecc Engine/Classes/%(Filename).es </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">cd $(SolutionDir)
+ecc Engine/Classes/%(Filename).es </Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(Filename).cpp;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(Filename).cpp;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Engine/Classes/%(Filename).es </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Engine/Classes/%(Filename).es </Message>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="AutoHeightMap.es">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">cd $(SolutionDir)
+ecc ParametricParticlesMP/%(Filename).es </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">cd $(SolutionDir)
+ecc ParametricParticlesMP/%(Filename).es </Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(Filename).cpp;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(Filename).cpp;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ParametricParticlesMP/%(Filename).es </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ParametricParticlesMP/%(Filename).es </Message>
+    </CustomBuild>
+    <CustomBuild Include="ParametricParticles.es">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">cd $(SolutionDir)
+ecc ParametricParticlesMP/%(Filename).es </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">cd $(SolutionDir)
+ecc ParametricParticlesMP/%(Filename).es </Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(Filename).cpp;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(Filename).cpp;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ParametricParticlesMP/%(Filename).es </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ParametricParticlesMP/%(Filename).es </Message>
+    </CustomBuild>
+    <CustomBuild Include="ParticleRotation.es">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">cd $(SolutionDir)
+ecc ParametricParticlesMP/%(Filename).es </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">cd $(SolutionDir)
+ecc ParametricParticlesMP/%(Filename).es </Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(Filename).cpp;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(Filename).cpp;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ParametricParticlesMP/%(Filename).es </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ParametricParticlesMP/%(Filename).es </Message>
+    </CustomBuild>
+    <CustomBuild Include="ParticleVelocity.es">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">cd $(SolutionDir)
+ecc ParametricParticlesMP/%(Filename).es </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">cd $(SolutionDir)
+ecc ParametricParticlesMP/%(Filename).es </Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(Filename).cpp;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(Filename).cpp;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ParametricParticlesMP/%(Filename).es </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ParametricParticlesMP/%(Filename).es </Message>
+    </CustomBuild>
+    <CustomBuild Include="SpawnShapeBase.es">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">cd $(SolutionDir)
+ecc ParametricParticlesMP/%(Filename).es </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">cd $(SolutionDir)
+ecc ParametricParticlesMP/%(Filename).es </Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(Filename).cpp;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(Filename).cpp;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ParametricParticlesMP/%(Filename).es </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ParametricParticlesMP/%(Filename).es </Message>
+    </CustomBuild>
+    <CustomBuild Include="SpawnShapeBox.es">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">cd $(SolutionDir)
+ecc ParametricParticlesMP/%(Filename).es </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">cd $(SolutionDir)
+ecc ParametricParticlesMP/%(Filename).es </Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(Filename).cpp;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(Filename).cpp;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ParametricParticlesMP/%(Filename).es </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ParametricParticlesMP/%(Filename).es </Message>
+    </CustomBuild>
+    <CustomBuild Include="SpawnShapeCylinder.es">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">cd $(SolutionDir)
+ecc ParametricParticlesMP/%(Filename).es </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">cd $(SolutionDir)
+ecc ParametricParticlesMP/%(Filename).es </Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(Filename).cpp;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(Filename).cpp;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ParametricParticlesMP/%(Filename).es </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ParametricParticlesMP/%(Filename).es </Message>
+    </CustomBuild>
+    <CustomBuild Include="SpawnShapeSphere.es">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">cd $(SolutionDir)
+ecc ParametricParticlesMP/%(Filename).es </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">cd $(SolutionDir)
+ecc ParametricParticlesMP/%(Filename).es </Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(Filename).cpp;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(Filename).cpp;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">ParametricParticlesMP/%(Filename).es </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ParametricParticlesMP/%(Filename).es </Message>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\EntitiesMP\Global.es">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">cd $(SolutionDir)
+ecc EntitiesMP/%(Filename).es </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">cd $(SolutionDir)
+ecc EntitiesMP/%(Filename).es </Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(Filename).cpp;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(Filename).cpp;%(Outputs)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">EntitiesMP/%(Filename).es </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">EntitiesMP/%(Filename).es </Message>
+    </CustomBuild>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
