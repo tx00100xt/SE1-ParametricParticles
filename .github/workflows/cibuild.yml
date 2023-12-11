@@ -48,6 +48,10 @@ jobs:
           cd ${{github.workspace}}/Sources/build-x64    
           make ecc
           make -j$(nproc || echo 4)
+          ls -la Debug/*
+          ls -la ${{github.workspace}}
+          ls -la ${{github.workspace}}/x64/SamTSE
+          ls -la ${{github.workspace}}/x64/SamTSE/Bin
           cp -vfr Debug/*.so ${{github.workspace}}/x64/SamTSE/Bin
           cd ${{github.workspace}}
           XZ_DEFAULTS="-T 10" tar --use-compress-program=xz -cpvf SamTSE-ParametricParticles-${{ steps.date.outputs.time }}-lnx-amd64-bin.tar.xz x64
