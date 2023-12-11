@@ -1,6 +1,55 @@
 # ParametricParticles
+[![Build status](https://github.com/tx00100xt/SE1-ParametricParticles/actions/workflows/cibuild.yml/badge.svg)](https://github.com/tx00100xt/SE1-ParametricParticles/actions/)
+[![GitHub release (latest by date)](https://img.shields.io/github/v/release/tx00100xt/SE1-ParametricParticles)](https://github.com/tx00100xt/SE1-ParametricParticles/releases/tag/v1.2.1)
+[![Github downloads](https://img.shields.io/github/downloads/tx00100xt/SE1-ParametricParticles/total.svg?logo=github&logoColor=white&style=flat-square&color=E75776)](https://github.com/tx00100xt/SE1-ParametricParticles/releases/)
 
 Advanced particle entity for the *Serious Sam - The Second Encounter 1.07 / 1.10*
+
+Building Serious Sam Parametric Particles
+-----------------------------------------
+
+### Linux
+
+Type this in your terminal:
+
+```
+git clone https://github.com/tx00100xt/SE1-ParametricParticles.git
+cd SE1-ParametricParticles/Sources
+mkdir build && cd build
+cmake ..
+make -j4
+make install
+```
+After that , libraries will be collected in the Bin directory .   
+Copy them to SeriousSamClassic/SamTSE/Bin folder.  
+After that , copy Resources/*.gro to SeriousSamClassic/SamTSE folder.
+
+Windows
+-------
+* This project can be compiled starting from Windows 7 and higher.
+
+1. Download and Install [Visual Studio 2015 Community Edition] or higher.
+2. Download and Install [Windows 10 SDK 10.0.14393.795] or other.
+3. Open the solution in the Sources folder, select Release x64 or Release Win32 and compile it.
+
+Supported Architectures
+----------------------
+* `x86`
+
+Supported OS
+-----------
+* `Linux`
+* `Windows`
+
+### Build status
+|CI|Platform|Compiler|Configurations|Platforms|Status|
+|---|---|---|---|---|---|
+|GitHub Actions|Windows, Ubuntu, FreeBSD, macOS|MSVC, GCC, Clang|Release|x86, x64|![GitHub Actions Build Status](https://github.com/tx00100xt/SE1-ParametricParticles/actions/workflows/cibuild.yml/badge.svg)
+
+You can download a the automatically build based on the latest commit.  
+To do this, go to the [Actions tab], select the top workflows, and then Artifacts.
+
+## Image
 
 <img width="322" height="258" align="left" src="./Images/Particles_Talos.gif">
 <img width="322" height="258" align="left" src="./Images/Particles_Rain.gif">
@@ -259,3 +308,7 @@ Multiple heightmaps can be used for single particle entity by building up a chai
 * **Size Z** - Z size of volume for this heightmap.
 * **Step in meters** - interval at which height values are sampled. Lower number means higher resolution.
 * **Visible** - if set to *TRUE*, calculated heightmap is visualized in *Serious Editor* in form of transparent yellow particles.
+
+[Visual Studio 2015 Community Edition]: https://go.microsoft.com/fwlink/?LinkId=615448&clcid=0x409 "Visual Studio 2015 Community Edition"
+[Windows 10 SDK 10.0.14393.795]: https://go.microsoft.com/fwlink/p/?LinkId=838916 "Windows 10 SDK 10.0.14393.795"
+[Actions tab]: https://github.com/tx00100xt/SE1-ParametricParticles/actions "Download Artifacts"
