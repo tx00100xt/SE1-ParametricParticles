@@ -1,10 +1,10 @@
 4245
 %{
-#include "StdH.h"
-#include "Particles.h"
+#include "ParametricParticlesMP/StdH/StdH.h"
+#include "ParametricParticlesMP/Particles.h"
 %}
 
-uses "SpawnShapeBase";
+uses "ParametricParticlesMP/SpawnShapeBase";
 
 class SpawnShapeCylinder : SpawnShapeBase {
 name "SpawnShapeCylinder";

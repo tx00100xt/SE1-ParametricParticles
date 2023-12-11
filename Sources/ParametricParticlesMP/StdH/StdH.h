@@ -1,10 +1,25 @@
 #include <Engine/Engine.h>
 
+/* rcg10042001 protect against Visual C-isms. */
+#ifdef _MSC_VER
 #define DECL_DLL __declspec(dllimport)
 #include "EntitiesMP/Global.h"
+#else
+#define DECL_DLL
+#endif
+#include "EntitiesMP/Global.h"
+
 #undef DECL_DLL
+#ifdef _MSC_VER
 #define DECL_DLL __declspec(dllexport)
+#else
+#define DECL_DLL
+#endif
 #include "ParametricParticlesMP/WeakPointer.h"
+
+#ifdef PLATFORM_UNIX
+#define DECL_DLL 
+#endif
 
 bool InWED();
 

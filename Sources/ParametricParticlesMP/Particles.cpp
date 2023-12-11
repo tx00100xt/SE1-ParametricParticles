@@ -1,12 +1,12 @@
-#include "StdH.h"
-#include "Particles.h"
-#include "AutoHeightMap.h"
-#include "ParametricParticles.h"
-#include "SpawnShapeBox.h"
-#include "SpawnShapeSphere.h"
-#include "SpawnShapeCylinder.h"
-#include "ParticleRotation.h"
-#include "ParticleVelocity.h"
+#include "ParametricParticlesMP/StdH/StdH.h"
+#include "ParametricParticlesMP/Particles.h"
+#include "ParametricParticlesMP/AutoHeightMap.h"
+#include "ParametricParticlesMP/ParametricParticles.h"
+#include "ParametricParticlesMP/SpawnShapeBox.h"
+#include "ParametricParticlesMP/SpawnShapeSphere.h"
+#include "ParametricParticlesMP/SpawnShapeCylinder.h"
+#include "ParametricParticlesMP/ParticleRotation.h"
+#include "ParametricParticlesMP/ParticleVelocity.h"
 
 FLOAT GetDiscreteGraphValueSince(const CStaticArray<FLOAT>& graph, FLOAT birthTime, BOOL loop)
 {
@@ -120,6 +120,8 @@ INDEX LowerBound(const CStaticArray<FLOAT2D>& arr, const FLOAT value)
   return first;
 }
 
+#ifdef _MSC_VER
+/*
 void EditGraphVariable(const CEntity* self, BOOL& property, CTString& graph, ULONG flags)
 {
   if (!property)
@@ -183,6 +185,8 @@ void EditGraphVariable(const CEntity* self, BOOL& property, CTString& graph, ULO
   CloseHandle(pi.hProcess);
   CloseHandle(pi.hThread);
 }
+*/
+#endif
 
 #ifdef USE_CUSTOM_PARTICLE_PROJECTION
 CProjection3D* Particle_GetProjection()
@@ -541,9 +545,15 @@ void ReinitParent(WeakPointer& p_parent, CEntity* self)
   }
 }
 
-extern BOOL g_parentIsPredictor = TRUE;
-extern BOOL g_parentRelativePlacement = FALSE;
-extern FLOAT3D g_projectionZAxis(0, 0, -1);
-extern FLOAT3D g_viewerLerpedPositionForComparison(0, 0, 0);
-extern FLOAT3D g_parentLerpedPositionForComparison(0, 0, 0);
-extern FLOATmatrix3D g_parentLerpedRotationForComparison = FLOATmatrix3D();
+#ifdef _MSC_VER
+#define __extern extern
+#else
+#define __extern
+#endif
+
+__extern BOOL g_parentIsPredictor = TRUE;
+__extern BOOL g_parentRelativePlacement = FALSE;
+__extern FLOAT3D g_projectionZAxis(0, 0, -1);
+__extern FLOAT3D g_viewerLerpedPositionForComparison(0, 0, 0);
+__extern FLOAT3D g_parentLerpedPositionForComparison(0, 0, 0);
+__extern FLOATmatrix3D g_parentLerpedRotationForComparison = FLOATmatrix3D();

@@ -1,5 +1,5 @@
-#include "StdH.h"
-#include "WeakPointer.h"
+#include "ParametricParticlesMP/StdH/StdH.h"
+#include "ParametricParticlesMP/WeakPointer.h"
 
 #define ID_WEAK_PTRS "WKPT"
 

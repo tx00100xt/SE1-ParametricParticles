@@ -1,7 +1,7 @@
 4246
 %{
-#include "StdH.h"
-#include "Particles.h"
+#include "ParametricParticlesMP/StdH/StdH.h"
+#include "ParametricParticlesMP/Particles.h"
 %}
 
 class ParticleRotation : CRationalEntity_EnableWeakPointer {
@@ -80,7 +80,7 @@ procedures:
       m_penNext = NULL;
     }
     
-    EditGraphVariable(this, m_speedStretchEdit, m_speedStretch);
+    // EditGraphVariable(this, m_speedStretchEdit, m_speedStretch);
     RecacheGraphs();
     
     ReinitParent(this);

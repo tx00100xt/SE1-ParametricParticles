@@ -1,7 +1,7 @@
 4248
 %{
-#include "StdH.h"
-#include "Particles.h"
+#include "ParametricParticlesMP/StdH/StdH.h"
+#include "ParametricParticlesMP/Particles.h"
 %}
 
 class AutoHeightMap : CRationalEntity_EnableWeakPointer {

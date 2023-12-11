@@ -1,13 +1,13 @@
 4242
 %{
-#include "StdH.h"
-#include "Particles.h"
-#include "AutoHeightMap.h"
-#include "ParticleVelocity.h"
-#include "ParticleRotation.h"
-#include "SpawnShapeBox.h"
-#include "SpawnShapeCylinder.h"
-#include "SpawnShapeSphere.h"
+#include "ParametricParticlesMP/StdH/StdH.h"
+#include "ParametricParticlesMP/Particles.h"
+#include "ParametricParticlesMP/AutoHeightMap.h"
+#include "ParametricParticlesMP/ParticleVelocity.h"
+#include "ParametricParticlesMP/ParticleRotation.h"
+#include "ParametricParticlesMP/SpawnShapeBox.h"
+#include "ParametricParticlesMP/SpawnShapeCylinder.h"
+#include "ParametricParticlesMP/SpawnShapeSphere.h"
 #define ID_PARAMETRIC_PARTICLES "PPAR"
 
 class COneAnim
@@ -20,7 +20,7 @@ public:
 };
 %}
 
-uses "SpawnShapeBase";
+uses "ParametricParticlesMP/SpawnShapeBase";
 
 enum eParticleBlendType
 {
@@ -752,14 +752,15 @@ procedures:
 
     AdjustProperties();
 
-    EditGraphVariable(this, m_editAlpha, m_alphaGraph, LIMIT_GRAPH_X | LIMIT_GRAPH_Y);
-    EditGraphVariable(this, m_editStretchX, m_stretchXGraph, LIMIT_GRAPH_X);
-    EditGraphVariable(this, m_editStretchY, m_stretchYGraph, LIMIT_GRAPH_X);
+    // EditGraphVariable(this, m_editAlpha, m_alphaGraph, LIMIT_GRAPH_X | LIMIT_GRAPH_Y);
+    // EditGraphVariable(this, m_editStretchX, m_stretchXGraph, LIMIT_GRAPH_X);
+    // EditGraphVariable(this, m_editStretchY, m_stretchYGraph, LIMIT_GRAPH_X);
     RecacheArrays();
 
     if (m_help) {
       m_help = FALSE;
-      ShellExecute(NULL, NULL, "https://github.com/SeriousAlexej/ParametricParticles", NULL, NULL, SW_SHOW);
+      // doesn't work on *nix, disabled ... 
+      // ShellExecute(NULL, NULL, "https://github.com/SeriousAlexej/ParametricParticles", NULL, NULL, SW_SHOW);
     }
 
     if (m_bActive) {

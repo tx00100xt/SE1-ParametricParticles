@@ -11,7 +11,7 @@ FLOAT GetGraphValueAt(const CStaticArray<FLOAT2D>& graph, FLOAT f);
 void RecacheGraph(CStaticArray<FLOAT2D>& cache, const CTString& graph);
 void RecacheGraphDiscrete(CStaticArray<FLOAT>& cache, const CTString& graph);
 INDEX LowerBound(const CStaticArray<FLOAT2D>& arr, const FLOAT value);
-void EditGraphVariable(const CEntity* self, BOOL& property, CTString& graph, ULONG flags = 0UL);
+//void EditGraphVariable(const CEntity* self, BOOL& property, CTString& graph, ULONG flags = 0UL);
 
 #if _MSC_VER == 1200
 #define USE_CUSTOM_PARTICLE_PROJECTION
