@@ -3,7 +3,9 @@
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/tx00100xt/SE1-ParametricParticles)](https://github.com/tx00100xt/SE1-ParametricParticles/releases/tag/v1.2.1)
 [![Github downloads](https://img.shields.io/github/downloads/tx00100xt/SE1-ParametricParticles/total.svg?logo=github&logoColor=white&style=flat-square&color=E75776)](https://github.com/tx00100xt/SE1-ParametricParticles/releases/)
 
-Advanced particle entity for the *Serious Sam - The Second Encounter 1.07 / 1.10*
+Advanced particle entity for the *Serious Sam - The Second Encounter 1.07 / 1.10*  
+
+Version 1.10 required https://github.com/tx00100xt/SeriousSamClassic or https://github.com/tx00100xt/SeriousSamClassic-VK to run.
 
 Building Serious Sam Parametric Particles
 -----------------------------------------
