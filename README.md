@@ -1,6 +1,6 @@
 # ParametricParticles
 
-Advanced particle entity for the *Serious Sam - The Second Encounter 1.07*
+Advanced particle entity for the *Serious Sam - The Second Encounter 1.07 / 1.10*
 
 <img width="322" height="258" align="left" src="./Images/Particles_Talos.gif">
 <img width="322" height="258" align="left" src="./Images/Particles_Rain.gif">
