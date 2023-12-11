@@ -88,8 +88,8 @@ jobs:
       run: | 
          msbuild /m /p:Configuration="${{ matrix.Configuration }}" /p:Platform="${{ matrix.Platform }}" ParametricParticles.sln 
          cd ${{github.workspace}}         
-         copy /y Resources\ParametricParticles.gro ${{github.workspace}}\x64\SamTSE
-         copy /y Resources\ParametricParticlesExamples.gro ${{github.workspace}}\x64\SamTSE
+         copy Resources\ParametricParticles.gro x32\SamTSE
+         copy Resources\ParametricParticlesExamples.gro x32\SamTSE
          7z a -mx=9 SamTSE-ParametricParticles-${{ steps.date.outputs.time }}-win32-bin.7z x32
       
     - name: Upload artifact
@@ -128,8 +128,8 @@ jobs:
       run: | 
          msbuild /m /p:Configuration="${{ matrix.Configuration }}" /p:Platform="${{ matrix.Platform }}" ParametricParticles.sln 
          cd ${{github.workspace}}         
-         copy /y Resources\ParametricParticles.gro ${{github.workspace}}\x64\SamTSE
-         copy /y Resources\ParametricParticlesExamples.gro ${{github.workspace}}\x64\SamTSE
+         copy Resources\ParametricParticles.gro x64\SamTSE
+         copy Resources\ParametricParticlesExamples.gro x64\SamTSE
          7z a -mx=9 SamTSE-ParametricParticles-${{ steps.date.outputs.time }}-win64-bin.7z x64
       
         
